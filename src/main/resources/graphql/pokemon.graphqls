@@ -1,0 +1,16 @@
+type Pokemon {
+	id: ID!,
+	name: String,
+	type: String,
+	evolution1: String,
+	evolution2: String
+}
+
+type Query {
+	pokemons(count: Int):[Pokemon]
+	pokemon(id: ID):Pokemon
+}
+
+type Mutation {
+	createPokemon(name: String!, type: String!, evolution1: String, evolution2: String):Pokemon
+}
